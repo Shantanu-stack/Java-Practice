@@ -1,1 +1,20 @@
+/// Create a program where we will store the digits and the sum of it.
+//// For ex. N=12345 ; sum = 15
+// Program
 
+public class pract2 {
+    public static void main(String[] args) {
+        int n = 12345678;  // Entering nuber
+        int sum = 0; /// sum saves sum of last digit of n 
+        int rem; // rem saves remainder 
+        do {
+            rem = n%10;   // to get last digit of the n
+            sum = sum + rem;  // to add digits of n 
+            n = n/10; // to remove the last digit which is added 
+           
+    
+        } while (n != 0);  // condition 
+         System.out.println("The sum of number is " + sum);
+    }
+    
+}
