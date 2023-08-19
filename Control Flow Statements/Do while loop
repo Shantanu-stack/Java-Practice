@@ -1,6 +1,6 @@
 /// Create a program where we will store the digits and the sum of it.
 //// For ex. N=12345 ; sum = 15
-// Program
+// Program // Problem 1
 
 public class pract2 {
     public static void main(String[] args) {
@@ -18,3 +18,53 @@ public class pract2 {
     }
     
 }
+
+
+// Problem 2 
+// Print the sum of even or odd numbers 
+
+import java.util.Scanner;
+public class oddeven{ 
+public static void main(String[] args) {
+
+int n; 
+int sum = 0;
+int i;
+System.out.println("Enter the number ");
+Scanner sc = new Scanner(System.in);
+n = sc.nextInt();
+
+if(n%2==0)  {    // the number which is not divisible by 2 is even and if not its odd then it gets performed in else loop
+
+   for (i=0;i<=n;i=i+2) {          // in this we take an even number and add it by 2 to add all the even number less than n 
+                                    // by i =i+2 we add two nubers in each input 
+       sum = sum + i;
+            
+}
+System.out.println("The sum Even nubers is  " +sum);
+
+} 
+else {
+for( i=1; i<=n; i=i+2){                  // 
+sum = sum + i;
+
+}
+System.out.println("The sum of odd numbers is  " +sum);   
+}
+
+
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
