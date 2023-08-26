@@ -5,7 +5,7 @@ public class main(String[] args)  {
 }
 public static boolean canpack(int bigcount, int smallcount, int goal) { 
 if( bigcount < 0 || smallcount < 0 || goal < 0  ) { 
-return false;
+return false;  // do not accept the negative values 
 }
 int totalcount = (bigcount*5) + smallcount;
 return goal >= totalcount && (goal%5 <= smallcount);  // goal%5 ensures that the full bigcount are fully accepted and extra smallcount is allowed
