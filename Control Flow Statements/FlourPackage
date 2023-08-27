@@ -1,6 +1,6 @@
 public class FlourPackage { 
 public class main(String[] args)  { 
-
+System.out.println((canpack(3,3,16));
 
 }
 public static boolean canpack(int bigcount, int smallcount, int goal) { 
