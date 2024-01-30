@@ -1,1 +1,7 @@
-f
+///Notes of inheritance 
+-It is a mechanism in which one object acquires all the properties and behaviors of a parent object 
+-Allows new classess to be created based on existing ones. 
+- class Subclass extends Superclass {
+   // New features and behavior specific to the subclass
+ }
+- Subclass inherits attributes and method from the parent class. Parent class is the Superclass
