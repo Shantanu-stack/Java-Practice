@@ -1,7 +1,77 @@
-///Notes of inheritance 
+##///Notes of inheritance 
 -It is a mechanism in which one object acquires all the properties and behaviors of a parent object 
 -Allows new classess to be created based on existing ones. 
 - class Subclass extends Superclass {
    // New features and behavior specific to the subclass
  }
 - Subclass inherits attributes and method from the parent class. Parent class is the Superclass
+
+Let's take a example 
+Input:- 
+Main.java
+package inheritance;
+
+public class Main {
+    public static void main(String[] args) {
+        Car car = new Car();
+        car.go();  // calling method 
+        car.stop();
+        System.out.println("The wheels in the car are ");
+        System.out.println(car.wheels);
+    }
+}
+
+Vehicle.java
+package inheritance;
+
+public class Vehicle {
+    double speed;
+
+    void go(){   // creating a method 
+        System.out.println("This vehicle is moving ");   
+
+    }
+    void stop(){
+        System.out.println("THe vehicle is stopped ");
+    }
+}
+
+Car.java
+package inheritance;
+
+public class Car extends Vehicle{
+int wheels = 4;
+int doors = 4;
+}
+
+Bicycle.java
+package inheritance;
+
+public class Bicycle extends Vehicle {
+ int Wheels = 2;
+ int Pedals = 2;
+
+}
+
+Here Main.java in the tester file and Vehicle.java is the parent class of the bicyle and car file the output of the following code would be like this 
+
+This vehicle is moving 
+THe vehicle is stopped 
+The wheels in the car are 
+4
+
+### Types of Inheritance supported by java 
+1)Single Inheritance
+2)Multilevel Inheritance
+3) Heirarchical Inheritance
+4) Multiple Inheritance
+5) Hybrid Inheritance
+
+
+
+
+
+
+
+
+
