@@ -78,15 +78,15 @@ import java.util.*;
 
 // Parent class
 class One {
-	public void print_geek()
+	public void print_you()
 	{
-		System.out.println("Geeks");     // making class one, it is a parent class it's method is print_geek()
+		System.out.println("You");     // making class one, it is a parent class it's method is print_you()
 	}
 }
 
 class Two extends One {
-	public void print_for() {
-System.out.println("for"); // method of this class is print_for()
+	public void print_do() {
+System.out.println("Do"); // method of this class is print_for()
 }  // class two inherits the value of class one 
 }
 
@@ -96,15 +96,15 @@ public class Main {
 	public static void main(String[] args)
 	{
 		Two g = new Two();   // creating a object of class Two  
-		g.print_geek();  
-		g.print_for();
-		g.print_geek();
+		g.print_you();  
+		g.print_do();
+		g.print_you();
 	}
 }
 Ouput:-
-Geeks
-for
-Geeks
+You
+Do
+You
 
 *2) Multilevel Inheritance 
 A derived class will be inheriting a base class, and as well as the derived class also acts as the base class for other classes.
