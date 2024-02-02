@@ -67,6 +67,171 @@ The wheels in the car are
 4) Multiple Inheritance
 5) Hybrid Inheritance
 
+*1) Single Inheritance 
+subclasses inherit the features of one superclass
+
+// Java program to illustrate the
+// concept of single inheritance
+import java.io.*;
+import java.lang.*;
+import java.util.*;
+
+// Parent class
+class One {
+	public void print_geek()
+	{
+		System.out.println("Geeks");     // making class one, it is a parent class it's method is print_geek()
+	}
+}
+
+class Two extends One {
+	public void print_for() {
+System.out.println("for"); // method of this class is print_for()
+}  // class two inherits the value of class one 
+}
+
+// Driver class
+public class Main {
+	// Main function
+	public static void main(String[] args)
+	{
+		Two g = new Two();   // creating a object of class Two  
+		g.print_geek();  
+		g.print_for();
+		g.print_geek();
+	}
+}
+Ouput:-
+Geeks
+for
+Geeks
+
+*2) Multilevel Inheritance 
+A derived class will be inheriting a base class, and as well as the derived class also acts as the base class for other classes.
+
+
+import java.io.*;
+import java.lang.*;
+import java.util.*;
+
+class One {  // this is the parent class 
+	public void print_geek()
+	{
+		System.out.println("Geeks");  
+	}
+}
+
+class Two extends One {
+	public void print_for() { System.out.println("for"); } // class two inherits method from class one here 
+} // we also call it intermediatory class 
+
+class Three extends Two {
+	public void print_geek()
+	{
+		System.out.println("Geeks");  // class three inherits methods from class two 
+	}   // we call it Derived class 
+}
+
+// Drived class
+public class Main {
+	public static void main(String[] args)
+	{
+		Three g = new Three();
+		g.print_geek();
+		g.print_for();  // 
+		g.print_geek();
+	}
+}
+
+*3) Hierarchical Inheritance
+one class serves as a superclass (base class) for more than one subclass
+
+
+
+class A {
+	public void print_A() { System.out.println("Class A"); }  // class A is a base class 
+}
+
+class B extends A {
+	public void print_B() { System.out.println("Class B"); } // class B is a derived class 
+}
+
+class C extends A {
+	public void print_C() { System.out.println("Class C"); }  // class C is a derived class 
+}
+
+class D extends A {
+	public void print_D() { System.out.println("Class D"); }   // class D is a derived class 
+}
+
+// Driver Class
+public class Test {
+	public static void main(String[] args)
+	{
+		B obj_B = new B();  // creating an object for class B
+		obj_B.print_A();
+		obj_B.print_B();
+
+		C obj_C = new C();  // creating an object for class C
+		obj_C.print_A();
+		obj_C.print_C();
+
+		D obj_D = new D();   // creating an object for class D
+		obj_D.print_A();
+		obj_D.print_D();
+	}
+}
+Ouput:- 
+Class A
+Class B
+Class A
+Class C
+Class A
+Class D
+
+*4) Multiple Inheritance
+one class can have more than one superclass and inherit features from all parent classes. Java does not support multiple inheritances with classes.
+In Java, we can achieve multiple inheritances only through Interfaces.
+
+
+import java.io.*;
+import java.lang.*;
+import java.util.*;
+
+interface One {
+	public void print_geek();
+}
+
+interface Two {
+	public void print_for();
+}
+
+interface Three extends One, Two {
+	public void print_geek(); // three inherits the methods of interface two and one. 
+}
+class Child implements Three {
+	@Override public void print_geek()
+	{
+		System.out.println("Geeks");  //  Child class implements the Three interface provides concrete implementations for both print_geek() and print_for() methods
+	}
+
+	public void print_for() { System.out.println("for"); }
+}
+
+// Drived class
+public class Main {
+	public static void main(String[] args)
+	{
+		Child c = new Child(); 
+		c.print_geek();
+		c.print_for();
+		c.print_geek();
+	}
+}
+
+
+
+
 
 
 
