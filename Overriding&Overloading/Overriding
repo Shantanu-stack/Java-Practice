@@ -1,1 +1,28 @@
-f
+###  Java Method Overriding ##
+Declaring a method in sub class which is already in parent class. So that a child class can give it's own implementation.
+
+Animal.java  // Parent Class
+public class Animal {
+    void speak(){
+        System.out.println("The animal speaks ");
+    }
+}
+
+Dog.java
+public class Dog extends Animal{
+    @Override
+    void speak(){
+        System.out.println("The dog barks!! ");
+    }
+}
+
+Tester1.java
+public class Tester1 {
+    public static void main(String[] args) {
+        Dog dog = new Dog();
+        dog.speak();
+        Animal an = new Animal();
+        an.speak();
+    }
+}
+Here Dog.java is a child class which has it's own implenmentation that's why we write @override to indicate it.
