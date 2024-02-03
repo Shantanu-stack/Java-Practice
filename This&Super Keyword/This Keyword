@@ -1,0 +1,11 @@
+# This keyword is a reference variable that refers to the current object 
+# It is used to refer to instance variable 
+
+
+public class MyClass {
+    private int x; // this is a local variable
+
+    public void setX(int x) {
+        this.x = x; // Assign the value of the local variable 'x' to the instance variable 'x'
+    }
+}
