@@ -1,0 +1,52 @@
+###Polymorphism in java refers to the ability to exhibit different behaviors in response to the same method call.
+###Types of Polymorphism
+###1) Method Overriding 
+Declaring a method in sub-class which is already present in parent class done so that child can give it's own implmentation 
+
+ex:- class Animal {
+    public void makeSound() {
+        System.out.println("Generic animal sound");
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    public void makeSound() {
+        System.out.println("Woof!");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal animal = new Dog(); // Polymorphic assignment
+        animal.makeSound(); // Outputs "Woof!" (dynamic binding)
+    }
+}
+
+###2) Method overloading 
+Occurs when a class has multiple methods with the same name but diffrent parameter lists 
+class Calculator {
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    public double add(double a, double b) {
+        return a + b;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Calculator calc = new Calculator();
+        int sum1 = calc.add(3, 4); // Calls the first add(int, int) method
+        double sum2 = calc.add(2.5, 3.1); // Calls the second add(double, double) method
+    }
+}
+
+
+
+
+
+
+
+
