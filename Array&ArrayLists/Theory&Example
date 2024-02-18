@@ -1,2 +1,42 @@
 ### Arrays are a fundamental data structure in Java used to store collections of elements of the same data type. They offer 
 ### a convenient way to group related data and access them using a single variable.
+Code is given below 
+file: practi3.java
+
+package arraylist;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class practi3 {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);  // initialising the input scanner the input values stored in variable
+        int arr1[] = new int[5];
+//        arr1[0] = 49;
+//        arr1[1] = 69;
+//        arr1[2] = 47;
+//        arr1[3] = 79;
+//        arr1[4] = 33;
+//        System.out.println(arr1[0]);
+//        System.out.println(arr1[1]);
+        for (int i = 0;i< arr1.length;i++ ){
+            arr1[i] = in.nextInt(); // values store in in variable are stored in array
+        }
+//        for (int i = 0;i< arr1.length;i++ ){
+//            System.out.print(arr1[i] + "    "); // array is printed
+//        }
+        System.out.println(Arrays.toString(arr1));
+
+        Scanner sca = new Scanner(System.in);  // array of objects 
+        String[] str = new String[5];
+        for (int j = 0; j< str.length; j++){
+            str[j] = sca.next();
+
+        }
+        System.out.println(Arrays.toString(str));
+
+
+    }
+}
+
