@@ -1,0 +1,33 @@
+## Methods ##
+A method in Java is a block of code that performs a specific task. Methods allow you to organize your code into reusable chunks, making it easier to read, maintain, and debug.
+Key Components of a Method
+i) Method Declaration: This includes the method's name, return type, and parameters.
+ii) Method Body: This contains the code that defines what the method does.
+
+## Example 1
+package polymorphism;
+import java.util.Scanner;
+public class rectangleis {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the lenght please");
+        int length = sc.nextInt();
+        System.out.println(" Enter the Breadth please ");
+        int breadth = sc.nextInt();
+      
+        perimeterect(length, breadth);
+        sc.close();
+    }
+    public static void perimeterect(int length, int breadth){
+        double perimeter = 2*(length + breadth);
+        System.out.println("The perimeter is " +perimeter);
+    }
+}
+
+
+
+
+
+
+
+
