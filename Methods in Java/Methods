@@ -24,6 +24,62 @@ public class rectangleis {
     }
 }
 
+## Example 2 ####
+package polymorphism;
+
+import java.util.Scanner;
+
+public class arithmetic {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the first number: ");
+        int a = sc.nextInt();
+        System.out.println("Enter the second number: ");
+        int b = sc.nextInt();
+
+        int result = add(a, b);
+        System.out.println("The sum is " + result);
+        int resultone = multi(a,b);
+        System.out.println("The multiplication of two numbers is " +resultone);
+        long resultwo = division(a,b);
+        System.out.println("The division of two is " +resultwo);
+        int resulthree = modulus(a,b);
+        System.out.println("The modulus is " +resulthree);
+        double resultfour = power(a,b);
+        System.out.println("The power is " +resultfour);
+        double resultfive = max(a,b);
+        System.out.println("The max number is " +resultfive);
+        sc.close();
+    }
+
+    public static int add(int a, int b) {
+        return a + b;
+    }
+    public static int multi(int a, int b){
+        return a*b;
+    }
+    public static long division(int a, int b){
+        if (b!= 0){
+            return a/b;
+        }
+        else {
+            System.out.println("the denominator cannot be zero broh ");
+            return 0;
+        }
+    }
+
+    public static int modulus(int a, int b) {
+        return a % b;
+    }
+    public static double power(int a, int b) {
+        return Math.pow(a, b);
+    }
+    // Method to find the maximum of two numbers
+    public static int max(int a, int b) {
+        return Math.max(a, b);
+    }
+
+}
 
 
 
