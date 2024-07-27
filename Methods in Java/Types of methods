@@ -1,0 +1,25 @@
+## Method overloading in java 
+Method overloading is a feature in Java that allows a class to have more than one method with the same name, 
+provided their parameter lists are different. It enhances the readability and usability of the program.
+
+package com.practice;
+
+public class sum {
+    public int sum(int x, int y){
+        return x+y;
+
+    }
+    public int sum(int x, int y, int z){
+        return x+y+z;
+    }
+    public int sum(int x, int y, int z, int a){
+        return x+y+z+a;
+    }
+
+    public static void main(String[] args) {
+        sum s = new sum();  /// here we are creating an object instance new sum() creates new instance object
+        System.out.println("THe sum of two numbers is " +s.sum(3,6));
+        System.out.println("THe sum of three numbers is " +s.sum(7,8,9));
+        System.out.println("THe sum of four numbers is " +s.sum(5,5,7,9));
+    }
+}
