@@ -30,5 +30,24 @@ public class InvertedTrianglePattern {
     }
 }
 
+Example # 3###
+package com.practice;
+
+public class sumofdigits {
+    public static void main(String[] args) {
+        int n = 1234;
+        int r;
+        int sum = 0;
+        do{
+            r = n%10;  /// to add the last digit to sum  
+            sum = sum + r;  // taking sum of all last digit number 
+            n = n/10; // delete the last digit 
+
+        } while (n!=0);
+            System.out.println("The sum of numbers is " +sum);
+
+    }
+}
+
 
 
